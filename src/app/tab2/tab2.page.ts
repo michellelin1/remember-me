@@ -6,7 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  sendTime:string;
+  message:string;
+  phoneNum:string;
+  constructor() {
+    const d = new Date();
+    this.sendTime = d.toISOString();
+    this.message = "";
+    this.phoneNum = "";
+  }
 
-  constructor() {}
+  sendMessage() {
+    console.log(this.sendTime, this.message, this.phoneNum);
+  }
 
 }

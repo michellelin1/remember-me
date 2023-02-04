@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Time Capsule
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,48 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Time Capsule</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <img src="/assets/time-capsule-img.svg" alt="time person">
+
+
+  <div class="indent-div">
+    <h5>Who do you want to send this to?</h5>
+    <ion-item>
+      <ion-label>Phone #: </ion-label>
+      <ion-input type="tel" placeholder="888-888-8888" [(ngModel)]="phoneNum"></ion-input>
+    </ion-item>
+  </div>
+  <!-- <ion-item fill="solid">
+    <ion-label position="floating">Phone #</ion-label>
+    <ion-input type="tel" ngModel></ion-input>
+    <ion-note slot="helper">Format: 123-456-7890</ion-note>
+    <ion-note slot="error">Invalid phone #</ion-note>
+  </ion-item> -->
+
+  <!-- <h2>Time Capsule</h2> -->
+  <div class="indent-div">
+    <h5>Set time for receive:</h5>
+  </div>
+  <ion-datetime-button datetime="datetime" class="dt-button"></ion-datetime-button>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime" [(ngModel)]="sendTime" [showDefaultButtons]="true"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
+  <ion-card>
+    <ion-card-header>
+      <!-- <ion-card-title>To your future self:</ion-card-title> -->
+      <ion-card-subtitle>To your future self:</ion-card-subtitle>
+    </ion-card-header>
+    <ion-textarea placeholder="your answer" [autoGrow]="true" style="padding: 15px" [(ngModel)]="message"></ion-textarea>
+  </ion-card>
+
+  <div class="submit-button">
+    <ion-button shape="round" (click)="sendMessage();">Submit</ion-button>
+  </div>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>

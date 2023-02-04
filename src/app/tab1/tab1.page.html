@@ -1,17 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Momento
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <app-past  *ngIf="lastEmittedValue < 33 && lastEmittedValue >= 0"></app-past>
+  <app-present *ngIf="lastEmittedValue < 67 && lastEmittedValue > 32"></app-present>
+  <app-future *ngIf="lastEmittedValue <= 100 && lastEmittedValue > 66"></app-future>
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-title>Insert prompt here</ion-card-title>
+      <ion-card-subtitle *ngIf="lastEmittedValue < 33 && lastEmittedValue >= 0">The Past</ion-card-subtitle>
+      <ion-card-subtitle *ngIf="lastEmittedValue < 67 && lastEmittedValue > 32">The Present</ion-card-subtitle>
+      <ion-card-subtitle *ngIf="lastEmittedValue <= 100 && lastEmittedValue > 66">The Future</ion-card-subtitle>
+    </ion-card-header>
+    <ion-textarea></ion-textarea>
+  </ion-card>
+  <ion-row class="ion-justify-content-center">
+    <ion-button>Submit</ion-button>
+  </ion-row> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+<ion-footer [translucent]="true">
+  <ion-range (ionChange)="onIonChange($event)"></ion-range>
+</ion-footer>

@@ -1,0 +1,41 @@
+.indent-div {
+    padding: 20px 20px;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.ion-datetime-button-overlay ion-datetime.datetime-grid {
+    width: 250px;
+}
+
+// .img-div {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 50%;
+// }
+
+// ion-modal {
+//     &.center {
+//       --width: calc(100% - 2em);
+//       align-items: center;
+//       --height: auto;
+//       .ion-page {
+//         position: relative;
+//         display: block;
+//         contain: content;
+//       }
+//     }
+//     --height: 50%;
+//     --border-radius: 16px;
+//     --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+//   }
+
+// ion-modal::part(backdrop) {
+//     background: rgba(209, 213, 219);
+//     opacity: 1;
+// }

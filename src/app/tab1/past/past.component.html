@@ -1,0 +1,23 @@
+<ion-content *ngIf="!showResponses">
+  <div class="banner">
+    <h2>Past</h2>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Insert prompt here</ion-card-title>
+      <ion-card-subtitle>The Past</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Enter your response</ion-card-title>
+    </ion-card-header>
+    <ion-textarea></ion-textarea>
+  </ion-card>
+  <ion-row class="ion-justify-content-center">
+    <ion-button (click)="toggleResponses()">Submit</ion-button>
+  </ion-row>
+</ion-content>
+<ion-content *ngIf="showResponses">
+  Responses component
+</ion-content>
