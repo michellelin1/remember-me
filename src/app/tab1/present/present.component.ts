@@ -7,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentComponent implements OnInit {
 
-  constructor() { }
+  showResponses: boolean;
+
+  constructor() {
+    this.showResponses = false;
+  }
 
   ngOnInit() {}
+
+  toggleResponses() {
+    this.showResponses = true;
+  }
 
 }

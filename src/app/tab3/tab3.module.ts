@@ -6,7 +6,7 @@ import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
-import { ResponseComponent } from '../response/response.component';
+// import { ResponseComponent } from '../response/response.component';
 @NgModule({
   imports: [
     IonicModule,
@@ -15,6 +15,6 @@ import { ResponseComponent } from '../response/response.component';
     ExploreContainerComponentModule,
     Tab3PageRoutingModule
   ],
-  declarations: [Tab3Page, ResponseComponent]
+  declarations: [Tab3Page]
 })
 export class Tab3PageModule {}

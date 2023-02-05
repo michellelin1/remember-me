@@ -7,12 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ResponseComponent implements OnInit {
 
-  response:string[] = ["res 1", "res 2", "res 3", "res 4"];
+  @Input() response:string[] = [];
   @Input() type:string = "";
   constructor() {
   }
 
   ngOnInit() {
+    // console.log(this.response);
   }
 
 }

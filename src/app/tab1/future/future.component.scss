@@ -6,3 +6,14 @@ ion-textarea {
     margin-left: 3vw;
     margin-right: 3vw;
 }
+
+ion-range {
+    --bar-background: white;
+    --bar-background-active: #00FF47;
+    // --bar-height: 8px;
+    // --bar-border-radius: 8px;
+    --knob-background: white;
+    // --knob-size: 40px;
+    // --pin-background: #ffafcc;
+    // --pin-color: #fff;
+  }

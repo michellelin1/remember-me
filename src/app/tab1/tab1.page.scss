@@ -16,6 +16,13 @@ ion-textarea {
 }
 
 ion-range {
-
-}
+    --bar-background: white;
+    --bar-background-active: white;
+    // --bar-height: 8px;
+    // --bar-border-radius: 8px;
+    --knob-background: #89D7F0;
+    // --knob-size: 40px;
+    // --pin-background: #ffafcc;
+    // --pin-color: #fff;
+  }
 

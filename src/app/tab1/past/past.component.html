@@ -1,16 +1,20 @@
 <ion-content *ngIf="!showResponses">
   <div class="banner">
-    <h2>Past</h2>
+    <img src="../../../assets/past.jpeg">
   </div>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Insert prompt here</ion-card-title>
-      <ion-card-subtitle>The Past</ion-card-subtitle>
+      <ion-card-title>I was feeling...</ion-card-title>
     </ion-card-header>
+    <ion-range [ticks]="true" [snaps]="true" [min]="0" [max]="5">
+      <ion-icon slot="start" name="sad-outline"></ion-icon>
+      <ion-icon slot="end" name="happy-outline"></ion-icon>
+    </ion-range>
   </ion-card>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Enter your response</ion-card-title>
+      <ion-card-title>What’s something that you wish you had quit earlier, but you decided not to?</ion-card-title>
+      <ion-card-subtitle>Enter your response below</ion-card-subtitle>
     </ion-card-header>
     <ion-textarea></ion-textarea>
   </ion-card>
@@ -19,5 +23,5 @@
   </ion-row>
 </ion-content>
 <ion-content *ngIf="showResponses">
-  Responses component
+  <app-response [response]="['My toxic relationship', 'I was really bad at dancing and I didn’t get better. It was an absolute waste of time and money.', 'CS 161', 'procrastinating']"></app-response>
 </ion-content>
